@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Moon, Sun, ChevronDown, ChevronUp } from "lucide-react"
+import { Moon, Sun, ChevronDown, ChevronUp, ArrowUpRight } from "lucide-react"
 import { useRouter } from 'next/navigation'
 import { useDarkMode } from "@/lib/useDarkMode"
 import Image from 'next/image'
@@ -26,6 +26,7 @@ interface ProjectItem {
       description: string;
       link: string;
       image: string;
+      demo?: string;
 }
 
 interface WritingItem {
@@ -67,29 +68,30 @@ const projectItems: ProjectItem[] = [
       //       link: "https://tourease.netlify.app/",
       //       image: "https://avatars.githubusercontent.com/u/183259969?s=200&v=4"
       // },
+      // {
+      //       name: "Inova8",
+      //       description: "Helps founders & businesses go from a rough idea to a working AI prototype, fast.",
+      //       link: "https://inova8.in/",
+      //       image: "https://scontent.cdninstagram.com/v/t51.82787-19/518133280_17850285762509742_2841479434577457000_n.jpg?_nc_cat=110&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=u0asY7NWM6QQ7kNvwHKPIUP&_nc_oc=Adp2OH3vk7VZ5BLIgT9_NwNumkOGHnhwe5ymX663CfBmhtttcx0K3Asqv98MCerNX_KJsQxGCGv5EkvEDaLkUQPj&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=NkmMniVmx5p8KJDRSwi5SA&_nc_ss=7b6a8&oh=00_Af-oh1lbZN1zoCKgngfZYf9FKIXHJP21gpOrBUI4nMxlHQ&oe=6A440C46"
+      // },
       {
-            name: "Inova8",
-            description: "Helps founders & businesses go from a rough idea to a working AI prototype, fast.",
-            link: "https://inova8.in/",
-            image: "https://scontent.cdninstagram.com/v/t51.82787-19/518133280_17850285762509742_2841479434577457000_n.jpg?_nc_cat=110&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=u0asY7NWM6QQ7kNvwHKPIUP&_nc_oc=Adp2OH3vk7VZ5BLIgT9_NwNumkOGHnhwe5ymX663CfBmhtttcx0K3Asqv98MCerNX_KJsQxGCGv5EkvEDaLkUQPj&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=NkmMniVmx5p8KJDRSwi5SA&_nc_ss=7b6a8&oh=00_Af-oh1lbZN1zoCKgngfZYf9FKIXHJP21gpOrBUI4nMxlHQ&oe=6A440C46"
-      },
-       {
             name: "Baba Construction",
             description: "Provides construction services and solutions for residential and commercial projects.",
-            link: "https://babaconstruction.netlify.app/",
-            image: "https://babaconstruction.netlify.app/logo.png"
+            link: "https://babaconstructions.co.in",
+            image: "https://babaconstruction.netlify.app/logo.png",
+            demo: "https://youtu.be/dSys_oPTrs0?si=F_U8xiLk3VeXCoXe"
       },
       {
             name: "QuickWorker",
-            description: "Connects you with local workers like electricians, plumbers, and more — fast and hassle-free.",
+            description: "Connects you with local workers like electricians, plumbers, and more fast & hassle-free.",
             link: "https://github.com/amitmasram/QuickWorker",
             image: "https://i.pinimg.com/1200x/c4/35/6c/c4356cd5454d06585e0a46066b555172.jpg"
       },
       {
             name: "Hometro",
-            description: "Find homes and rental properties in your city with exclusive deals you won't see listed elsewhere. ",
+            description: "Find homes & rental properties in your city with exclusive deals you won't see listed elsewhere. ",
             link: "https://hometro.in/",
-            image: "https://scontent.cdninstagram.com/v/t51.82787-19/720064387_17925033396355074_2662839305886314536_n.jpg?_nc_cat=106&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=T-vd_eH5FwMQ7kNvwHiL4Xs&_nc_oc=Adp2qSVqjM5fw5Yvd_xjd8mrtbPxiQYWyXC7HCQY0gazjouTWPxjuv_XxA405V38zEC3KsMBKeTQKyzHI_XJ1JyS&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=-t6iUzR2YAhIZkYTSL2u2A&_nc_ss=7b6a8&oh=00_Af-oZdIak9bbxXZdP2UdXuvQQMmJBTOzoJcmUXkCXxZvHg&oe=6A441625"
+            image: "https://instagram.fnag6-1.fna.fbcdn.net/v/t51.82787-19/782362373_17938028766355074_6500120592106939637_n.jpg?_nc_cat=109&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=CgSxD2_CYJAQ7kNvwH7XvqL&_nc_oc=AdqCL1tfsbHijdv4a52IWxy0pafc5Kc_uOTe-fu_qeYa-oHZAbhdsJl_IOU1MMKFlN0UV71w-1cjGCX57SKUpLf5&_nc_zt=24&_nc_ht=instagram.fnag6-1.fna&_nc_gid=WZfB_Zt8KJ4H5ZTAzV22eg&_nc_ss=7b6a8&oh=00_AQEgMysWDaBTnXfhItky4Pt7aNCstLCd2h-ModynmvvbsA&oe=6A906C6A"
       },
       {
             name: "Legaly AI",
@@ -179,11 +181,12 @@ export default function PortfolioLanding() {
                                           </h1>
                                           {/* Location with minimal globe icon */}
                                           <div className={`flex items-center text-xs ${isDarkMode ? "text-white-100" : "text-gray-500"} mb-1`}>
-                                                {/* Minimal Globe Icon */}
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.2">
-                                                      <circle cx="10" cy="10" r="8" stroke="currentColor" fill="none" />
-                                                      <ellipse cx="10" cy="10" rx="3.5" ry="8" stroke="currentColor" fill="none" />
-                                                      <line x1="2" y1="10" x2="18" y2="10" stroke="currentColor" />
+                                                {/* Mars Icon */}
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="w-[14px] h-[14px] mr-[6px] opacity-70 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                                      <circle cx="12" cy="12" r="10" />
+                                                      <circle cx="8.5" cy="9.5" r="2.5" />
+                                                      <circle cx="14.5" cy="14.5" r="1.5" />
+                                                      <circle cx="9.5" cy="16.5" r="1" />
                                                 </svg>
                                                 <span>Tech Valley, Mars</span>
                                           </div>
@@ -223,15 +226,14 @@ export default function PortfolioLanding() {
 
                               <div className="mb-5 space-y-2 text-left">
                                     <p className={`text-[0.95rem] md:text-[1.037rem] ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
-                                          I try to put my work out into the world in a way that contributes to others and helps make things useful.
+                                          I try to put my work out into the world in a way that contributes to others and makes things useful.
                                     </p>
 
                                     <p className={`text-[0.95rem] md:text-[1.037rem] ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
-                                          Getting better as an engineer and thinker excites me, developing the foundation to build things and understand the world.
-                                          I specialize in building software.
+                                          Getting better as an engineer and thinker excites me. I enjoy building things and understanding the world, and specialize in building applications.
                                     </p>
                                     <p className={`text-[0.95rem] md:text-[1.037rem] ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
-                                          I like to read, try and build new things. Beyond that, I’ve taken part in <span onClick={navigateToHackathons} className="text-blue-600 hover:underline cursor-pointer">hackathons</span> and contributed to <span onClick={navigateToOpenSource} className="text-blue-600 hover:underline cursor-pointer">opensource</span>.
+                                          I like to read, try and experience new things. Beyond that, I’ve taken part in <span onClick={navigateToHackathons} className="text-blue-600 hover:underline cursor-pointer">hackathons</span> and contributed to <span onClick={navigateToOpenSource} className="text-blue-600 hover:underline cursor-pointer">open-source</span>.
                                     </p>
                               </div>
 
@@ -239,26 +241,103 @@ export default function PortfolioLanding() {
 
                               <div className="mb-3">
                                     <h2 className={`text-base md:text-lg font-bold mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h2>
-                                    <div className="flex flex-col gap-0">
-                                          {projectItems.map((item, index) => (
-                                                <div key={index} className="flex flex-nowrap items-start gap-2">
-                                                      <div className="flex-shrink-0 mt-4">
-                                                            <Image
-                                                                  src={item.image || "https://via.placeholder.com/60"}
-                                                                  alt={item.name}
-                                                                  width={20}
-                                                                  height={20}
-                                                                  className="object-cover rounded-md w-[28px] h-[28px] md:w-[28px] md:h-[28px]"
-                                                            />
+                                    <div className="flex flex-col">
+                                          {projectItems.map((item, index) => {
+                                                const isExpanded = expandedItem === index;
+                                                return (
+                                                      <div key={index} className={`${!isExpanded ? `border-b ${isDarkMode ? 'border-gray-800' : 'border-gray-200'}` : ''} last:border-b-0 transition-colors duration-300`}>
+                                                            <div className={`flex flex-col transition-all duration-300 ${isExpanded ? `mt-0.5 mb-1 px-3 pt-0 pb-2.5 sm:px-4 sm:pt-0 sm:pb-3.5 -mx-3 sm:-mx-4 rounded-xl border ${isDarkMode ? 'border-gray-800' : 'border-gray-200'}` : '-mt-1.5 pb-2.5'}`}>
+                                                                  {/* Header */}
+                                                                  <div
+                                                                        className="flex flex-col gap-0.5 cursor-pointer group"
+                                                                        onClick={() => toggleExpand(index)}
+                                                                  >
+                                                                        {/* Top Row: Logo, Title, Arrow */}
+                                                                        <div className="flex items-center justify-between w-full">
+                                                                              <div className="flex items-center gap-3 flex-1 min-w-0">
+                                                                                    <div className="flex-shrink-0 mt-[2px] pt-[14px]">
+                                                                                          <Image
+                                                                                                src={item.image || "https://via.placeholder.com/60"}
+                                                                                                alt={item.name}
+                                                                                                width={24}
+                                                                                                height={24}
+                                                                                                className="object-cover rounded-md w-[24px] h-[24px]"
+                                                                                          />
+                                                                                    </div>
+                                                                                    <h3 className="text-[14px] md:text-[15px] font-semibold leading-none group-hover:underline pr-2">
+                                                                                          {item.name}
+                                                                                    </h3>
+                                                                              </div>
+                                                                              <div className="flex-shrink-0 mt-[2px] flex items-center justify-center">
+                                                                                    {isExpanded ? <ChevronUp size={16} className={isDarkMode ? "text-gray-300" : "text-gray-500"} /> : <ChevronDown size={16} className={isDarkMode ? "text-gray-300" : "text-gray-500"} />}
+                                                                              </div>
+                                                                        </div>
+
+                                                                        {/* Bottom Row: Spacer + Subtitle */}
+                                                                        <div className="flex items-start gap-3 w-full -mt-2">
+                                                                              <div className="w-[24px] flex-shrink-0"></div>
+                                                                              <p className={`text-[0.85rem] md:text-[0.95rem] ${isDarkMode ? "text-gray-300" : "text-gray-500"} flex-1`}>
+                                                                                    {item.description}
+                                                                              </p>
+                                                                        </div>
+                                                                  </div>
+
+                                                                  {/* Expanded Content */}
+                                                                  <div
+                                                                        className={`grid transition-all duration-300 ease-in-out ${isExpanded ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'}`}
+                                                                  >
+                                                                        <div className="overflow-hidden">
+                                                                              <div className="flex flex-col md:flex-row gap-4">
+                                                                                    <div className="md:w-[55%] flex-shrink-0">
+                                                                                          {item.demo ? (
+                                                                                                item.demo.endsWith('.mp4') || item.demo.endsWith('.webm') ? (
+                                                                                                      <video
+                                                                                                            src={item.demo}
+                                                                                                            controls
+                                                                                                            className={`object-cover rounded-lg w-full h-auto aspect-video border ${isDarkMode ? 'border-gray-800' : 'border-gray-200'}`}
+                                                                                                      />
+                                                                                                ) : (
+                                                                                                      <iframe
+                                                                                                            src={item.demo.includes('youtu.be/') ? item.demo.replace('youtu.be/', 'www.youtube.com/embed/') : item.demo.replace('watch?v=', 'embed/')}
+                                                                                                            title={`${item.name} demo`}
+                                                                                                            className={`object-cover rounded-lg w-full h-auto aspect-video border ${isDarkMode ? 'border-gray-800' : 'border-gray-200'}`}
+                                                                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                                                                            allowFullScreen
+                                                                                                      />
+                                                                                                )
+                                                                                          ) : (
+                                                                                                <Image
+                                                                                                      src={item.image || "https://via.placeholder.com/400x300"}
+                                                                                                      alt={item.name}
+                                                                                                      width={400}
+                                                                                                      height={300}
+                                                                                                      className={`object-cover rounded-lg w-full h-auto aspect-video border ${isDarkMode ? 'border-gray-800' : 'border-gray-200'}`}
+                                                                                                />
+                                                                                          )}
+                                                                                    </div>
+                                                                                    <div className="md:w-[45%] flex flex-col justify-between py-1">
+                                                                                          <p className={`text-[13px] md:text-[14px] ${isDarkMode ? "text-gray-300" : "text-gray-600"} leading-relaxed`}>
+                                                                                                {item.description}
+                                                                                          </p>
+                                                                                          <div className="mt-4 flex items-center gap-4">
+                                                                                                <a
+                                                                                                      href={item.link}
+                                                                                                      target="_blank"
+                                                                                                      rel="noopener noreferrer"
+                                                                                                      className="inline-flex items-center gap-1 text-[13px] hover:underline font-medium text-blue-600"
+                                                                                                >
+                                                                                                      <ArrowUpRight size={14} />
+                                                                                                      Live
+                                                                                                </a>
+                                                                                          </div>
+                                                                                    </div>
+                                                                              </div>
+                                                                        </div>
+                                                                  </div>
+                                                            </div>
                                                       </div>
-                                                      <div className="flex-1 min-w-0">
-                                                            <a href={item.link} className="block hover:underline">
-                                                                  <h3 className="text-[14px] md:text-[15px] font-semibold leading-tight">{item.name}</h3>
-                                                                  <p className={`mt-1 text-[0.85rem] md:text-[0.95rem] ${isDarkMode ? "text-gray-300" : "text-gray-500"}`}>{item.description}</p>
-                                                            </a>
-                                                      </div>
-                                                </div>
-                                          ))}
+                                                );
+                                          })}
                                     </div>
                               </div>
 
