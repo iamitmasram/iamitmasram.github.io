@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Moon, Sun, ChevronDown, ChevronUp, ArrowUpRight } from "lucide-react"
+import { Moon, Sun, ChevronDown, ChevronUp, ArrowUpRight, Globe } from "lucide-react"
 import { useRouter } from 'next/navigation'
 import { useDarkMode } from "@/lib/useDarkMode"
 import Image from 'next/image'
@@ -181,13 +181,8 @@ export default function PortfolioLanding() {
                                           </h1>
                                           {/* Location with minimal globe icon */}
                                           <div className={`flex items-center text-xs ${isDarkMode ? "text-white-100" : "text-gray-500"} mb-1`}>
-                                                {/* Mars Icon */}
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="w-[14px] h-[14px] mr-[6px] opacity-70 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                                      <circle cx="12" cy="12" r="10" />
-                                                      <circle cx="8.5" cy="9.5" r="2.5" />
-                                                      <circle cx="14.5" cy="14.5" r="1.5" />
-                                                      <circle cx="9.5" cy="16.5" r="1" />
-                                                </svg>
+                                                {/* Globe Icon */}
+                                                <Globe className="w-[14px] h-[14px] mr-[6px] opacity-70 text-orange-500" strokeWidth={1.5} />
                                                 <span>Tech Valley, Mars</span>
                                           </div>
                                           {/* Social links */}
