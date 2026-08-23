@@ -344,12 +344,12 @@ export default function PortfolioLanding() {
 
 
 
-                              <div className="mb-5">
+                              <div className="mb-4 -mt-2">
                                     <div className="flex items-center justify-between mb-2">
                                           <h2 className={`text-base md:text-lg font-bold mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>Writings</h2>
                                           <span className="text-blue-600 text-xs md:text-sm font-medium hover:underline cursor-pointer"><span onClick={navigateToWrintings}>View all</span> </span>
                                     </div>
-                                    <ul className="space-y-3 list-none pl-0">
+                                    <ul className="space-y-3 list-none pl-0 -mt-2">
                                           {writingItems.map((item, index) => (
                                                 <li key={index} className="flex flex-col gap-0">
                                                       <div className="flex items-start gap-3">
