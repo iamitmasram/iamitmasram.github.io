@@ -181,8 +181,8 @@ export default function PortfolioLanding() {
                                           </h1>
                                           {/* Location with minimal globe icon */}
                                           <div className={`flex items-center text-xs ${isDarkMode ? "text-white-100" : "text-gray-500"} mb-1`}>
-                                                {/* Globe Icon */}
-                                                <Globe className="w-[14px] h-[14px] mr-[6px] opacity-70 text-orange-500" strokeWidth={1.5} />
+                                                {/* Globe Icon and Color - #AD6242 */}
+                                                <Globe className="w-[14px] h-[14px] mr-[6px] opacity-70" style={{ color: '#E86F4A' }} strokeWidth={1.5} />
                                                 <span>Tech Valley, Mars</span>
                                           </div>
                                           {/* Social links */}
