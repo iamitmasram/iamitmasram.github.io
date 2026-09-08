@@ -83,7 +83,7 @@ function WritingCard({
                             : "none",
                     }}
                 />
-                
+
                 {/* Vertical connector line (hidden after last item) */}
                 {!isLast && (
                     <div
@@ -170,7 +170,7 @@ function WritingCard({
                         </p>
                     )}
                     <p
-                        className={`text-[0.85rem] md:text-[0.95rem] mt-1 ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}
+                        className={`text-[0.83rem] md:text-[0.93rem] mt-1 ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}
                     >
                         {writing.description}
                     </p>
@@ -234,7 +234,7 @@ export default function WritingsPage() {
                 </div>
 
                 <p
-                    className={`text-[0.95rem] md:text-[1.037rem] mb-5 ${isDarkMode ? "text-gray-200" : "text-gray-800"}`}
+                    className={`text-[0.93rem] md:text-[1.035rem] mb-5 ${isDarkMode ? "text-gray-200" : "text-gray-800"}`}
                 >
                     I Sometimes write and share about my experiences, projects, and thoughts on technology, AI, and the future. Here are some of my recent writings and contributions.
                 </p>

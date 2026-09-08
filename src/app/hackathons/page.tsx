@@ -81,7 +81,7 @@ export default function HackathonsPage() {
             <span className="sr-only">Toggle theme</span>
           </Button> */}
         </div>
-        <p className={`text-[0.95rem] md:text-[1.037rem] mb-5 ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+        <p className={`text-[0.93rem] md:text-[1.035rem] mb-5 ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
         I like to participating in global hackathons, primarily online, where I collaborate with individuals and diverse teams to solve challenges and build projects.
       </p>
       <hr className="w-full border-t border-gray-300 my-2" />
@@ -136,7 +136,7 @@ export default function HackathonsPage() {
                 <p className={`text-[11px] md:text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>{hackathon.date}</p>
                 <h2 className={`text-[14px] md:text-[15px] font-semibold ${isDarkMode ? 'text-white' : 'text-black'}`}>{hackathon.name}</h2>
                 <p className={`text-[11px] md:text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>{hackathon.location}</p>
-                <p className={`text-[0.85rem] md:text-[0.95rem] text-white-600 mb-5 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>{hackathon.description}</p>
+                <p className={`text-[0.83rem] md:text-[0.93rem] text-white-600 mb-5 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>{hackathon.description}</p>
                 <div className="mt-2 flex items-center space-x-2">
                   {hackathon.tags.map((tag, tagIndex) => (
                     <Badge key={tagIndex} variant="secondary">{tag}</Badge>

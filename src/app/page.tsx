@@ -76,32 +76,32 @@ const projectItems: ProjectItem[] = [
       // },
       {
             name: "Baba Construction",
-            description: "Provides construction services and solutions for residential and commercial projects.",
+            description: "Construction company specializing in residential and commercial projects.",
             link: "https://babaconstructions.co.in",
             image: "https://babaconstruction.netlify.app/logo.png",
             demo: "https://youtu.be/dSys_oPTrs0?si=F_U8xiLk3VeXCoXe"
       },
       {
             name: "QuickWorker",
-            description: "Connects you with local workers like electricians, plumbers, and more fast & hassle-free.",
+            description: "Quickly connects you with trusted local workers for all your needs.",
             link: "https://github.com/amitmasram/QuickWorker",
             image: "https://i.pinimg.com/1200x/c4/35/6c/c4356cd5454d06585e0a46066b555172.jpg"
       },
       {
             name: "Hometro",
-            description: "Find homes & rental properties in your city with exclusive deals you won't see listed elsewhere. ",
+            description: "Find homes and rentals in your city with exclusive deals.",
             link: "https://hometro.in/",
-            image: "https://instagram.fnag6-1.fna.fbcdn.net/v/t51.82787-19/782362373_17938028766355074_6500120592106939637_n.jpg?_nc_cat=109&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=CgSxD2_CYJAQ7kNvwH7XvqL&_nc_oc=AdqCL1tfsbHijdv4a52IWxy0pafc5Kc_uOTe-fu_qeYa-oHZAbhdsJl_IOU1MMKFlN0UV71w-1cjGCX57SKUpLf5&_nc_zt=24&_nc_ht=instagram.fnag6-1.fna&_nc_gid=WZfB_Zt8KJ4H5ZTAzV22eg&_nc_ss=7b6a8&oh=00_AQEgMysWDaBTnXfhItky4Pt7aNCstLCd2h-ModynmvvbsA&oe=6A906C6A"
+            image: "https://instagram.fnag1-7.fna.fbcdn.net/v/t51.82787-19/782362373_17938028766355074_6500120592106939637_n.jpg?_nc_cat=109&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=RlKd7NpP1bkQ7kNvwEyCCbs&_nc_oc=AdrRDQjkn3yxzopOgaTXsgpGG6alPauodp3kevSinYG7B4sB2bpz8tm-yYmWCL8tiF7ie1zqbdm4CAyriUCDEBQo&_nc_zt=24&_nc_ht=instagram.fnag1-7.fna&_nc_gid=7kT6SHYgz25CXvBvK3FB_A&_nc_ss=7b6a8&oh=00_AQKHN2VAzxr6gmBm4RZZpS9Ln2VmxOtjdhyMKi-FZeJ5jg&oe=6AA5846A"
       },
       {
             name: "Legaly AI",
-            description: "Upload any contract or document and get an AI-powered breakdown of what it actually says.",
+            description: "Upload documents and get a clear AI-powered summary of what they mean.",
             link: "https://legalyai.lovable.app/",
             image: "https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
       },
       {
             name: "OpenLaunch",
-            description: "A Product Hunt-inspired platform to launch brands, software, and products online.",
+            description: "Launch and discover brands, software, and products online.",
             link: "https://openlaunch.lovable.app",
             image: "https://i.pinimg.com/736x/50/29/69/5029694bfb2ceca6026b036a4769b71f.jpg"
       },
@@ -220,14 +220,14 @@ export default function PortfolioLanding() {
 
 
                               <div className="mb-5 space-y-2 text-left">
-                                    <p className={`text-[0.95rem] md:text-[1.037rem] ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+                                    <p className={`text-[0.90rem] md:text-[1.030rem] ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
                                           I try to put my work out into the world in a way that contributes to others and makes things useful.
                                     </p>
 
-                                    <p className={`text-[0.95rem] md:text-[1.037rem] ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+                                    <p className={`text-[0.90rem] md:text-[1.030rem] ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
                                           Getting better as an engineer and thinker excites me. I enjoy building things and understanding the world, and specialize in building applications.
                                     </p>
-                                    <p className={`text-[0.95rem] md:text-[1.037rem] ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+                                    <p className={`text-[0.90rem] md:text-[1.030rem] ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
                                           I like to read, try and experience new things. Beyond that, I’ve taken part in <span onClick={navigateToHackathons} className="text-blue-600 hover:underline cursor-pointer">hackathons</span> and contributed to <span onClick={navigateToOpenSource} className="text-blue-600 hover:underline cursor-pointer">open-source</span>.
                                     </p>
                               </div>
@@ -269,7 +269,7 @@ export default function PortfolioLanding() {
                                                                         </div>
 
                                                                         {/* Bottom Row: Spacer + Subtitle */}
-                                                                        <div className="flex items-start gap-3 w-full -mt-2">
+                                                                        <div className="flex items-start gap-3 w-full -mt-2.5">
                                                                               <div className="w-[24px] flex-shrink-0"></div>
                                                                               <p className={`text-[0.85rem] md:text-[0.95rem] ${isDarkMode ? "text-gray-300" : "text-gray-500"} flex-1`}>
                                                                                     {item.description}
