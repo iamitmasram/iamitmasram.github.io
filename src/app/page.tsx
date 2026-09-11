@@ -225,7 +225,7 @@ export default function PortfolioLanding() {
                                     </p>
 
                                     <p className={`text-[0.90rem] md:text-[1.030rem] ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
-                                          Getting better as an engineer and thinker excites me. I enjoy building things and understanding the world, and specialize in building applications.
+                                          Getting better as an engineer and thinker excites me. I enjoy building things and understanding the world, and currently focus on building AI applications.
                                     </p>
                                     <p className={`text-[0.90rem] md:text-[1.030rem] ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
                                           I like to read, try and experience new things. Beyond that, I’ve taken part in <span onClick={navigateToHackathons} className="text-blue-600 hover:underline cursor-pointer">hackathons</span> and contributed to <span onClick={navigateToOpenSource} className="text-blue-600 hover:underline cursor-pointer">open-source</span>.
