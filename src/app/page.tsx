@@ -104,11 +104,7 @@ const projectItems: ProjectItem[] = [
             description: "Launch and discover brands, software, and products online.",
             link: "https://openlaunch.lovable.app",
             image: "https://i.pinimg.com/736x/50/29/69/5029694bfb2ceca6026b036a4769b71f.jpg"
-      },
-
-
-
-
+      }
 ];
 
 
