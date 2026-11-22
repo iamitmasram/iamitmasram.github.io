@@ -246,14 +246,20 @@ export default function PortfolioLanding() {
                                                                         {/* Top Row: Logo, Title, Arrow */}
                                                                         <div className="flex items-center justify-between w-full">
                                                                               <div className="flex items-center gap-3 flex-1 min-w-0">
-                                                                                    <div className="flex-shrink-0 mt-[2px] pt-[14px]">
-                                                                                          <Image
+                                                                                    <div className="flex-shrink-0 mt-[1px] pt-[10px]">
+                                                                                          {/* <Image
                                                                                                 src={item.image || "https://via.placeholder.com/60"}
                                                                                                 alt={item.name}
                                                                                                 width={24}
                                                                                                 height={24}
                                                                                                 className="object-cover rounded-md w-[24px] h-[24px]"
-                                                                                          />
+                                                                                          /> */}
+                                                                                            <span
+                                                                              className={`-mt-1 md:-mt-1.5 text-[1rem] md:text-[1.1rem] select-none ${isDarkMode ? 'text-gray-400' : 'text-black-400'}`}
+                                                                              style={{ lineHeight: '1', display: 'inline-block', transform: 'translateY(-3px)' }}
+                                                                        >
+                                                                              ▪
+                                                                        </span>
                                                                                     </div>
                                                                                     <h3 className="text-[14px] md:text-[15px] font-semibold leading-none group-hover:underline pr-2">
                                                                                           {item.name}
@@ -266,7 +272,7 @@ export default function PortfolioLanding() {
 
                                                                         {/* Bottom Row: Spacer + Subtitle */}
                                                                         <div className="flex items-start gap-3 w-full -mt-2.5">
-                                                                              <div className="w-[24px] flex-shrink-0"></div>
+                                                                              <div className="w-[6px] flex-shrink-0"></div>
                                                                               <p className={`text-[0.85rem] md:text-[0.95rem] ${isDarkMode ? "text-gray-300" : "text-gray-500"} flex-1`}>
                                                                                     {item.description}
                                                                               </p>
